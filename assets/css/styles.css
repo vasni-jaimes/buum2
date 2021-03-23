@@ -205,7 +205,7 @@ section.logo_titulo .container {
 
 section.logo_titulo .container figure.letras-blancas {
 	position: absolute;
-	bottom: 35%;
+	bottom: 30%;
 	left: 50%;
 	transform: translateX(-50%);
 }
