@@ -32,7 +32,7 @@ const summer = document.querySelector('.info-slider .estacion-principal');
 if (summer) {
 	summer.addEventListener('click', function(e) {
 		e.preventDefault();
-		window.location.href = '/buum/summer.html';
+		window.location.href = '/buum2/summer.html';
 	});
 }
 
@@ -54,86 +54,19 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 
 	//EFECTO EN MOBILE ----------------------------------------------------------------------------
 
-	const li_spring = document.querySelector('li.spring');
-	if (li_spring) {
+	const hh2 = $('section.slider-bumming .info-slider h2.estacion-principal');
+	if (hh2) {
 
+		hh2.css('letter-spacing', '20px');
+		hh2.css('display', 'inline-block');
+		hh2.addClass('cambioSummer');
+		$('.info-slider h2:first-child').css({
+			'letterSpacing': '15px',
+			'color': '#D24D39',
+		});
 
-		//EFECTO AUTOMATICO
-		setInterval(function(){ 
-			
-			setTimeout(function(){ 
-
-				let hh2 = $('section.slider-bumming .info-slider h2.estacion-principal');
-				hh2.text("SPRING");
-				hh2.css('letter-spacing', '25px');
-				hh2.css('display', 'inline-block');
-				hh2.addClass('cambioSpring');
-				$('.info-slider h2:first-child').css({
-					'letterSpacing': '7px',
-					'color': '#D24D39',
-				});
-
-				$('.imagen-slider.mobile figure').css('display', 'none');
-				$('.imagen-slider.mobile figure.two-img').fadeIn();
-
-			}, 0);
-
-			setTimeout(function(){ 
-				
-				let hh2 = $('section.slider-bumming .info-slider h2.estacion-principal');
-				hh2.text("FALL");
-				hh2.css('letter-spacing', '25px');
-				hh2.css('display', 'block');
-				hh2.removeClass('cambioSpring');
-				hh2.addClass('cambioFall');
-				$('.info-slider h2:first-child').css({
-					'letterSpacing': '7px',
-					'color': '#D24D39',
-				});
-
-				$('.imagen-slider.mobile figure').css('display', 'none');
-				$('.imagen-slider.mobile figure.fall').fadeIn();
-
-			}, 4000);
-
-			setTimeout(function(){ 
-				
-				let hh2 = $('section.slider-bumming .info-slider h2.estacion-principal');
-				hh2.text("WINTER");
-				hh2.css('letter-spacing', '25px');
-				hh2.css('display', 'inline-block');
-				hh2.removeClass('cambioFall');
-				hh2.addClass('cambioWinter');
-				$('.info-slider h2:first-child').css({
-					'letterSpacing': '7px',
-					'color': '#D24D39',
-				});
-
-				$('.imagen-slider.mobile figure').css('display', 'none');
-				$('.imagen-slider.mobile figure.winter').fadeIn();
-
-
-			}, 7000);
-
-			setTimeout(function(){ 
-				
-
-				let hh2 = $('section.slider-bumming .info-slider h2.estacion-principal');
-				hh2.text("SUMMER");
-			    hh2.css('letter-spacing', '0');
-			    hh2.removeClass('cambioWinter');
-				$('.info-slider h2:first-child').css({
-					'letterSpacing': '0',
-					'color': '#000',
-				});
-
-				$('.imagen-slider.mobile figure').css('display', 'none');
-				$('.imagen-slider.mobile figure.summer').fadeIn();
-
-
-			}, 10000);
-
-		}, 13000);
+		$('.imagen-slider.mobile figure.one-img').css('display', 'none');
+		$('.imagen-slider.mobile figure.summer').css('display', 'block');
 	}
 
 	//EFECTO EN MOBILE\\ ------------------------------------------------------------------------------------

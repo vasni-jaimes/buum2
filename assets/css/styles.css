@@ -205,9 +205,10 @@ section.logo_titulo .container {
 
 section.logo_titulo .container figure.letras-blancas {
 	position: absolute;
-	bottom: 30%;
+	bottom: 32%;
 	left: 50%;
 	transform: translateX(-50%);
+	max-width: 150px;
 }
 
 section.logo_titulo .container figure.letras-blancas img.desktop {
@@ -356,7 +357,8 @@ section.slider-bumming .info-slider h2.cambioSpring::before {
 
 section.slider-bumming .info-slider h2.cambioSummer::before {
 	background: #84CAFE;
-	width: 90%;
+	width: 94%;
+	top: -35px;
 	content: 'NEW';
 	text-align: left;
 	padding-left: 20px;
@@ -1367,7 +1369,7 @@ a.web-site {
 
 	section.slider-bumming .container .imagen-slider.mobile {
 		display: block;
-		margin-bottom: 145px;
+		margin-bottom: 130px;
 	}
 
 	section.slider-bumming .container .imagen-slider.desktop {
@@ -1382,11 +1384,12 @@ a.web-site {
 	}
 
 	section.slider-bumming .info-slider h2 {
-		font-size: 45px;
+		font-size: 37px;
 	}
 
 	section.slider-bumming .info-slider h2:first-child {
 		margin-bottom: 20px;
+		line-height: 50px;
 	}
 
 	section.slider-bumming .info-slider ul li.list-sum {
