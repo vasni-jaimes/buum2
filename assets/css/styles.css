@@ -1738,6 +1738,10 @@ a.web-site {
 		font-size: 20px;
 	}
 
+	section.imagen-estacion {
+		margin-bottom: 80px;
+	}
+
 	/************** EAT -- WHERE \  ************/
 
 }
