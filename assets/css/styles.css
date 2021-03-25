@@ -209,7 +209,7 @@ section.logo_titulo .container figure.letras-blancas {
 	left: 50%;
 	transform: translateX(-50%);
 	max-width: 300px;
-	width: 35%;
+	width: 10%;
 }
 
 section.logo_titulo .container figure.letras-blancas img.desktop {
@@ -1297,12 +1297,8 @@ a.web-site {
 		transform: translate(-50%, -10%);
 	}
 
-	section.logo_titulo .container figure.letras-blancas img.desktop {
-		display: none
-	}
-
-	section.logo_titulo .container figure.letras-blancas img.mobile {
-		display: block;
+	section.logo_titulo .container figure.letras-blancas {
+		width: 21%;
 	}
 
 	section.travel_agency div.curva h2.subtitle-two::before {
