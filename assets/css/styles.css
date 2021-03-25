@@ -208,7 +208,8 @@ section.logo_titulo .container figure.letras-blancas {
 	bottom: 32%;
 	left: 50%;
 	transform: translateX(-50%);
-	max-width: 150px;
+	max-width: 300px;
+	width: 35%;
 }
 
 section.logo_titulo .container figure.letras-blancas img.desktop {
