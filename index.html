@@ -273,18 +273,20 @@
 					if ($(window).scrollTop() >= travel) {
 						if (!$("header").hasClass("barda-menu")) {
 							$("header").addClass("barda-menu");
-							$("header .container a figure img.logo-home__n").css('display', 'block');
-							$("header .container a figure img.logo-home__b").css('display', 'none');
-							$(".hamburger__line-in").removeClass('hamburgesa-blanca');
 						}
+
+						$("header .container a figure img.logo-home__n").css('display', 'block');
+						$("header .container a figure img.logo-home__b").css('display', 'none');
+						$(".hamburger__line-in").removeClass('hamburgesa-blanca');
 					}
 					else {
 						if ($("header").hasClass("barda-menu")) {
 							$("header").removeClass("barda-menu");
-							$("header .container a figure img.logo-home__n").css('display', 'none');
-							$("header .container a figure img.logo-home__b").css('display', 'block');
-							$(".hamburger__line-in").addClass('hamburgesa-blanca');
 						}
+
+						$("header .container a figure img.logo-home__n").css('display', 'none');
+						$("header .container a figure img.logo-home__b").css('display', 'block');
+						$(".hamburger__line-in").addClass('hamburgesa-blanca');
 					}
 				});
 			});
