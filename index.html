@@ -14,8 +14,8 @@
 			<div class="container flex">
 				<a href="index.html">
 					<figure>
-						<img class="logo-home__n" src="assets/img/logo.png">
-						<img class="logo-home__b" src="assets/img/logo-blanco.png">
+						<img class="logo-home__n" src="assets/img/logo.png" alt="logo-normal">
+						<img class="logo-home__b" src="assets/img/logo-blanco.png" alt="logo-blanco">
 					</figure>
 				</a>
 				<div class="content content--demo-3">
@@ -274,20 +274,22 @@
 					if ($(window).scrollTop() >= travel) {
 						if (!$("header").hasClass("barda-menu")) {
 							$("header").addClass("barda-menu");
+							$("header .container a figure img.logo-home__n").css('display', 'block');
+							$("header .container a figure img.logo-home__b").css('display', 'none');
+							$(".hamburger__line-in").removeClass('hamburgesa-blanca');
 						}
 
-						$("header .container a figure img.logo-home__n").css('display', 'block');
-						$("header .container a figure img.logo-home__b").css('display', 'none');
-						$(".hamburger__line-in").removeClass('hamburgesa-blanca');
+						
 					}
 					else {
 						if ($("header").hasClass("barda-menu")) {
 							$("header").removeClass("barda-menu");
+							$("header .container a figure img.logo-home__n").css('display', 'none');
+							$("header .container a figure img.logo-home__b").css('display', 'block');
+							$(".hamburger__line-in").addClass('hamburgesa-blanca');
 						}
 
-						$("header .container a figure img.logo-home__n").css('display', 'none');
-						$("header .container a figure img.logo-home__b").css('display', 'block');
-						$(".hamburger__line-in").addClass('hamburgesa-blanca');
+						
 					}
 				});
 			});

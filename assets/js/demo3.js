@@ -78,85 +78,76 @@ class ShapeOverlays {
 }
 
 (function() {
-  const elmHamburger = document.querySelector('.hamburger');
-  const gNavItems = document.querySelectorAll('.global-menu__item');
-  const elmOverlay = document.querySelector('.shape-overlays');
-  let itemsnav = document.querySelectorAll('.global-menu__item');
-  const overlay = new ShapeOverlays(elmOverlay);
 
-  elmHamburger.addEventListener('click', () => {
-    if (overlay.isAnimating) {
-      return false;
-    }
-    overlay.toggle();
-    if (overlay.isOpened === true) {
+    const elmHamburger = document.querySelector('.hamburger');
+    const gNavItems = document.querySelectorAll('.global-menu__item');
+    const elmOverlay = document.querySelector('.shape-overlays');
+    let itemsnav = document.querySelectorAll('.global-menu__item');
+    const overlay = new ShapeOverlays(elmOverlay);
 
-      elmHamburger.classList.add('is-opened-navi');
-      for (var i = 0; i < gNavItems.length; i++) {
-        gNavItems[i].classList.add('is-opened');
-      }
-    } else {
-      elmHamburger.classList.remove('is-opened-navi');
-      for (var i = 0; i < gNavItems.length; i++) {
-        gNavItems[i].classList.remove('is-opened');
-      }
-    }
-  });
+    elmHamburger.addEventListener('click', () => {
 
-
-
-  for (var i = 0; i <= itemsnav.length - 1; i++) {
-    
-    itemsnav[i].addEventListener('click', (e) => {
-
-      if ($(e.target).hasClass('submenu__demo--padre3')) {
-        e.preventDefault();
-        $('ul').fadeToggle(300);
-        return false;
-      }
-
-      //MEDIA QUERY
-      var mediaqueryList = window.matchMedia("(min-width: 767px)");
-      if(mediaqueryList.matches) {
-          //EfectoScrollColores();
-      }
-      else {
-        $('header > div > a > figure > img').attr('src', 'assets/img/logo.png')
-      }
-
-
-      if (overlay.isAnimating) {
-        return false;
-      }
-      overlay.toggle();
-      if (overlay.isOpened === true) {
-
-        let categorias = document.querySelector('div.portafolio-container div.categorias');
-        if (categorias) {
-          categorias.style.zIndex = "3";
+        if (overlay.isAnimating) {
+            return false;
         }
 
-        elmHamburger.classList.add('is-opened-navi');
-        for (var i = 0; i < gNavItems.length; i++) {
-          gNavItems[i].classList.add('is-opened');
+        overlay.toggle();
+        if (overlay.isOpened === true) {
+            elmHamburger.classList.add('is-opened-navi');
+            for (var i = 0; i < gNavItems.length; i++) {
+                gNavItems[i].classList.add('is-opened');
+            }
+        } else {
+            elmHamburger.classList.remove('is-opened-navi');
+            for (var i = 0; i < gNavItems.length; i++) {
+                gNavItems[i].classList.remove('is-opened');
+            }
         }
-      } else {
-
-        elmHamburger.classList.remove('is-opened-navi');
-        for (var i = 0; i < gNavItems.length; i++) {
-          gNavItems[i].classList.remove('is-opened');
-        }
-
-        let categorias = document.querySelector('div.portafolio-container div.categorias');
-        if (categorias) {
-          setTimeout(function(){ categorias.style.zIndex = "5"; }, 500);
-        }
-
-      }
-
     });
-  }
 
 
+
+    for (var i = 0; i <= itemsnav.length - 1; i++) {
+        
+        itemsnav[i].addEventListener('click', (e) => {
+
+            if ($(e.target).hasClass('submenu__demo--padre3') || $(e.target).parent().hasClass('submenu__demo--padre3')) {
+                e.preventDefault();
+                $('ul').fadeToggle(300);
+                return false;
+            }
+
+            if (overlay.isAnimating) {
+                return false;
+            }
+            overlay.toggle();
+
+            if (overlay.isOpened === true) {
+
+                let categorias = document.querySelector('div.portafolio-container div.categorias');
+                if (categorias) {
+                    categorias.style.zIndex = "3";
+                }
+
+                elmHamburger.classList.add('is-opened-navi');
+                for (var i = 0; i < gNavItems.length; i++) {
+                    gNavItems[i].classList.add('is-opened');
+                }
+
+            } else {
+
+                elmHamburger.classList.remove('is-opened-navi');
+                for (var i = 0; i < gNavItems.length; i++) {
+                    gNavItems[i].classList.remove('is-opened');
+                }
+
+                let categorias = document.querySelector('div.portafolio-container div.categorias');
+                if (categorias) {
+                    setTimeout(function(){ categorias.style.zIndex = "5"; }, 500);
+                }
+            }
+
+        });
+    }
 
 }());
