@@ -1394,6 +1394,18 @@ a.web-site {
 		margin-right: 35px;
 	}
 
+	section.slider-bumming .info-slider ul li.spring {
+		text-decoration: underline #F3CA3E;
+	}
+
+	section.slider-bumming .info-slider ul li.winter {
+		text-decoration: underline #5F6166;
+	}
+
+	section.slider-bumming .info-slider ul li.fall {
+		text-decoration: underline #C16127;
+	}
+
 	section.slider-bumming .info-slider ul li {
 		font-size: 16px;
 	}
